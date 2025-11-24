@@ -4,7 +4,7 @@ from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
 from langchain_live import ChatGeminiLive
 from typing import List
 
-API_KEY = "AIzaSyC9vifSNF_RB6hOaWL59ikUk1-6r2AT0uQ"
+API_KEY = os.getenv("GOOGLE_GEMINI_KEY")
 
 async def main():
     chat = ChatGeminiLive(api_key=API_KEY)
